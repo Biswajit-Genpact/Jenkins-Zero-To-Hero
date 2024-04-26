@@ -50,6 +50,7 @@ pipeline {
             GIT_REPO_NAME = "CD_MANIFEST_k8s_Deployment"
             GIT_USER_NAME = "BiswajitGen"
         }
+        
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
