@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://http://34.239.134.156/"
+        SONAR_URL = "http://34.239.134.156/"
       }
       steps {
         withCredentials([string(credentialsId: 'sonartoken_ciccd', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -50,7 +50,7 @@ pipeline {
             GIT_REPO_NAME = "CD_MANIFEST_k8s_Deployment"
             GIT_USER_NAME = "BiswajitGen"
         }
-        
+
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
